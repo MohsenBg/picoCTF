@@ -8,9 +8,9 @@ In this post, I'll share my experience solving a picoCTF challenge called 'Vault
 
 I tried to solve the question, and here it is:
 
-```
+<hr/>
 Your mission is to enter Dr. Evil's laboratory and retrieve the blueprints for his Doomsday Project. The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer and requires a password to open. Unfortunately, our undercover agents have not been able to obtain the secret passwords for the vault doors, but one of our junior agents obtained the source code for each vault's computer! You will need to read the source code for each level to figure out what the password is for that vault door. As a warmup, we have created a replica vault in our training facility. The source code for the training vault is here: VaultDoorTraining.java
-```
+<hr/>
 
 At first, I thought, "Oh, it's a Java program, but I’ve never decompiled a Java program before." However, after downloading the file, I realized there was no need to decompile anything because it was the source code, not the bytecode. It turned out to be easier than I expected.
 
