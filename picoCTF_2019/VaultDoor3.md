@@ -117,7 +117,7 @@ You could manually trace the loops and logic in reverse order, but since we have
 But how do we reverse the logic?
 Good question! We need to move through the function from bottom to top.
 
-Here’s the function that converts the buffer to the password. By the way, I used Java because the challenge itself was written in Java.java too:
+Here’s the function that converts the buffer to the password. By the way, I used Java because the challenge itself was written in Java too:
 
 ``` java
 public class App {
