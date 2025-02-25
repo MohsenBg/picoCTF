@@ -1,0 +1,22 @@
+# PicoCTF 2019  
+This section documents the challenges I solved in PicoCTF 2019. I share my solutions, experiences, and the tools I used.  
+
+## Challenges  
+### Reverse Engineering (RSE)  
+- [Vault Door Training](./picoCTF_2019/vault-door-training.md)  
+- [Vault Door 1](./picoCTF_2019/VaultDoor1.md2)  
+- [Vault Door 3](./picoCTF_2019/VaultDoor3.md)  
+
+### Binary Exploitation  
+coming soon 😁
+
+
+## Tools Used  
+- VsCode
+- Ghidra  
+- Cutter  
+- IDA Free  
+- Python Scripts
+- Java 
+
+Feel free to explore and learn from my solutions!
