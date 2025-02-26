@@ -74,7 +74,8 @@ The checkPassword function simply converts the password to bytes. If you don't k
 For example, in ASCII, 'A' has a value of 65 in decimal or 0x41 in hexadecimal.
 
 Java strings use UTF-16, which supports over a million characters, but here we're dealing with ASCII values, which represent 128 characters.
-<img src="./picoCTF2019/image/ASCII-Table.png" alt="ASCII Table"/>
+
+<img src="./image/ASCII-Table.png" alt="ASCII Table"/>
 
 The main question is how to convert these bytes to a string. There are many ways to do this, including using online tools, terminal commands, or even writing Java code. Why not use Java?
 
