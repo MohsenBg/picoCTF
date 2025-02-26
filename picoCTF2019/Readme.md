@@ -3,10 +3,10 @@ This section documents the challenges I solved in PicoCTF 2019. I share my solut
 
 ## Challenges  
 ### Reverse Engineering (RSE)  
-- [Vault Door Training](./picoCTF_2019/vault-door-training.md)  
-- [Vault Door 1](./picoCTF_2019/VaultDoor1.md2)  
-- [Vault Door 3](./picoCTF_2019/VaultDoor3.md)  
-- [Vault Door 4](./picoCTF_2019/VaultDoor4.md)  
+- [Vault Door Training](./vault-door-training.md)  
+- [Vault Door 1](./VaultDoor1.md2)  
+- [Vault Door 3](./VaultDoor3.md)  
+- [Vault Door 4](./VaultDoor4.md)  
 
 ### Binary Exploitation  
 coming soon 😁
