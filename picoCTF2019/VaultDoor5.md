@@ -97,22 +97,17 @@ First, we decode the base64 string, and then we use URL decoding to get the corr
 
 For this example, instead of using Java code to decode it, I used an online tool called `CyberChef`.
 
-<br/>
-You can open CyberChef in your favorite web browser and copy the encoded string into the input field:  
-
+### CyberChef
+- You can open CyberChef in your favorite web browser and copy the encoded string into the input field:  
 <img src="./image/CyberChef01.png" alt="CyberChef encoding input"/>  
 
-<br/>
-After that, drag and drop the **From Base64** operation into the recipe area to decode the base64:  
-
+- After that, drag and drop the **From Base64** operation into the recipe area to decode the base64:  
 <img src="./image/CyberChef02.png" alt="CyberChef base64 decoding"/>  
 
-<br>
-Next, add the **URL Decode** operation to the recipe. Finally, click the **Back** button at the bottom of the recipe area to see the decoded result:  
-
+- Next, add the **URL Decode** operation to the recipe. Finally, click the **Back** button at the bottom of the recipe area to see the decoded result:  
 <img src="./image/CyberChef03.png" alt="CyberChef URL decoding"/>  
 
-<br/>
+
 <br/>
 
 The password is:
