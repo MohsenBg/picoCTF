@@ -1,11 +1,9 @@
 # Vault Door 1
 
 ## Introduction
-
-In this post, I'll walk you through my experience solving a picoCTF challenge called "Vault Door 1." This challenge involves analyzing Java source code to uncover a hidden password. It's a great exercise for beginners interested in reverse engineering and source code analysis, and I'll share the steps I took to crack the code.
+In this post, we tackle the Java-based code challenge called "Vault Door 1." Our goal is to reverse engineer the source code to understand how the password is validated and create the correct password to bypass this level.
 
 ## My Experience
-
 New Days New Challenge to Solve so  I tried to solve the question, and here it is:
 
 <hr/>
