@@ -1,17 +1,17 @@
 # Vault Door 7
 
 ## Introduction
-In this challenge, we analyze a Java program that verifies a password. Instead of brute-forcing, we reverse-engineer its logic to find the correct input.
-The checkPassword function applies a bitwise XOR to each character. By reversing this operation, we can reconstruct the valid password.
-This write-up walks through the code analysis and password generation step by step
+In this post, we solve the picoCTF "Vault Door 7" Reverse Engineering challenge, which uses bitwise shifts to validate the password, making it harder to analyze. This is a great exercise for improving your reverse engineering skills! 🚀
 
 ## My Experience
 Let's See The Question and analyze it:
 <hr/>
 This vault uses bit shifts to convert a password string into an array of integers. Hurry, agent, we are running out of time to stop Dr. Evil's nefarious plans! The source code for this vault is here: VaultDoor7.java
 <hr/>
-In this challenge, we will work on cracking XOR encryption as mentioned in the question. Let's open the Java file provided by the challenge.
- 
+This Vault Door 7 challenge uses bit shifts to convert a password into an array of integers, making reverse engineering more complex. The provided source code is in Java, and our task is to reconstruct the correct password.
+
+Since it's a Vault Door challenge, I downloaded the VaultDoor7.java file and opened it in VS Code to analyze its logic.
+
 ```Java
 import java.util.*;
 import javax.crypto.Cipher;
@@ -83,9 +83,10 @@ class VaultDoor7 {
 }
 ```
 
-Let's analyze the code and figure out how the password is validated so we can generate a valid password to bypass this level.
+The code first removes the picoCTF{} prefix, then converts the password into an array of integers using the passwordToIntArray function. The challenge checks if this array matches predefined integer values.
 
-If you solved the Vault Door Challenge, you should already know that the main part of the code we need to check is the `checkPassword` function.
+Now, let’s break it down and extract the password! 
+
 
 ``` Java
 public int[] passwordToIntArray(String hex) {
@@ -115,17 +116,8 @@ public boolean checkPassword(String password) {
         && x[7] == 942748212;
 }
 ```
-The `checkPassword` function first checks if the password length is 32. Then, it converts the password into a byte array and loops over each byte, XORing it with 0x55 and subtracting a corresponding byte from myBytes. If the result is not zero, the password is incorrect.
 
-We can simplify the if statement like this:
-```Java
-if ((passBytes[i] ^ 0x55) !=  myBytes[i]) {
-    return false;
-}
-```
-If you look at it closely, you can see that the result of XORing the password with 0x55 must equal myBytes[i].
-
-So, we can reverse that by XORing myBytes with 0x55. Let's write a Java function to do that:
+Let's write a Java function to do that:
 
 ```Java
 public static byte[] passwordToHexArray(int[] x) {
