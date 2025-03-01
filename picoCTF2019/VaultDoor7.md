@@ -1,17 +1,17 @@
 # Vault Door 7
 
 ## Introduction
-In this post, I'll walk you through my experience solving a picoCTF challenge called "Vault Door 7". This challenge involves analyzing Java source code to uncover a hidden password. It's a great exercise for beginners interested in reverse engineering and source code analysis. I'll share the steps I took to crack the code and the thought process behind reversing the logic.
+In this challenge, we analyze a Java program that verifies a password. Instead of brute-forcing, we reverse-engineer its logic to find the correct input.
+The checkPassword function applies a bitwise XOR to each character. By reversing this operation, we can reconstruct the valid password.
+This write-up walks through the code analysis and password generation step by step
 
 ## My Experience
-This forth third Challenge So if i miss something sorry about that Let's See the Questions
-
+Let's See The Question and analyze it:
 <hr/>
 This vault uses bit shifts to convert a password string into an array of integers. Hurry, agent, we are running out of time to stop Dr. Evil's nefarious plans! The source code for this vault is here: VaultDoor7.java
 <hr/>
-
-so anther java code-base and like before i download it and open that in visual studio and here it is code
-
+In this challenge, we will work on cracking XOR encryption as mentioned in the question. Let's open the Java file provided by the challenge.
+ 
 ```Java
 import java.util.*;
 import javax.crypto.Cipher;
@@ -32,6 +32,7 @@ class VaultDoor7 {
         }
     }
 
+    
     // Each character can be represented as a byte value using its
     // ASCII encoding. Each byte contains 8 bits, and an int contains
     // 32 bits, so we can "pack" 4 bytes into a single int. Here's an
@@ -82,36 +83,83 @@ class VaultDoor7 {
 }
 ```
 
+Let's analyze the code and figure out how the password is validated so we can generate a valid password to bypass this level.
+
+If you solved the Vault Door Challenge, you should already know that the main part of the code we need to check is the `checkPassword` function.
+
+``` Java
+public int[] passwordToIntArray(String hex) {
+    int[] x = new int[8];
+    byte[] hexBytes = hex.getBytes();
+    for (int i=0; i<8; i++) {
+        x[i] = hexBytes[i*4]   << 24
+             | hexBytes[i*4+1] << 16
+             | hexBytes[i*4+2] << 8
+             | hexBytes[i*4+3];
+        }
+    return x;
+}
+
+public boolean checkPassword(String password) {
+    if (password.length() != 32) {
+        return false;
+    }
+    int[] x = passwordToIntArray(password);
+    return x[0] == 1096770097
+        && x[1] == 1952395366
+        && x[2] == 1600270708
+        && x[3] == 1601398833
+        && x[4] == 1716808014
+        && x[5] == 1734304867
+        && x[6] == 942695730
+        && x[7] == 942748212;
+}
+```
+The `checkPassword` function first checks if the password length is 32. Then, it converts the password into a byte array and loops over each byte, XORing it with 0x55 and subtracting a corresponding byte from myBytes. If the result is not zero, the password is incorrect.
+
+We can simplify the if statement like this:
+```Java
+if ((passBytes[i] ^ 0x55) !=  myBytes[i]) {
+    return false;
+}
+```
+If you look at it closely, you can see that the result of XORing the password with 0x55 must equal myBytes[i].
+
+So, we can reverse that by XORing myBytes with 0x55. Let's write a Java function to do that:
 
 ```Java
-import java.nio.charset.Charset;
-import java.util.Arrays;
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        String password = genPassword();
-        System.out.println(password);
+public static byte[] passwordToHexArray(int[] x) {
+    byte[] hexBytes = new byte[32];
+    for (int i = 0; i < 8; i++) {
+        hexBytes[i*4]   = (byte) (x[i] >> 24);
+        hexBytes[i*4+1] = (byte) (x[i] >> 16);
+        hexBytes[i*4+2] = (byte) (x[i] >> 8);
+        hexBytes[i*4+3] = (byte) x[i];
     }
-
-    public static byte[] passwordToHexArray(int[] x) {
-        byte[] hexBytes = new byte[32];
-        for (int i = 0; i < 8; i++) {
-            hexBytes[i * 4] = (byte) (x[i] >> 24);
-            hexBytes[i * 4 + 1] = (byte) (x[i] >> 16);
-            hexBytes[i * 4 + 2] = (byte) (x[i] >> 8);
-            hexBytes[i * 4 + 3] = (byte) x[i];
-        }
-        return hexBytes;
-    }
-
-    public static String genPassword() {
-        int[] password = {
-                1096770097, 1952395366, 1600270708, 1601398833,
-                1716808014, 1734304867, 942695730, 942748212
-        };
-
-        byte[] pass = passwordToHexArray(password);
-        return new String(pass);
-    }
+    return hexBytes;
 }
+   
+public static String genPassword() {
+    int [] password = {
+        1096770097,1952395366,1600270708,1601398833,
+        1716808014,1734304867,942695730,942748212
+    };
+
+    byte[] pass = passwordToHexArray(password);
+    return new String(pass);
+}
+
+```
+
+Now, running `genPassword()` will generate the correct password to bypass this level.
+
+
+The password is:
+```
+A_b1t_0f_b1t_sh1fTiNg_dc80e28124
+```
+
+Therefore, the flag is:
+```
+picoCTF{A_b1t_0f_b1t_sh1fTiNg_dc80e28124}
 ```
