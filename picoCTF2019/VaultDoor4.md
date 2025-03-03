@@ -1,7 +1,7 @@
 # Vault Door 4
 
 ## Introduction
-In this post, I'll walk you through my experience solving a picoCTF challenge called "Vault Door 4". This challenge involves analyzing Java source code to uncover a hidden password. It's a great exercise for beginners interested in reverse engineering and source code analysis. I'll share the steps I took to crack the code and the thought process behind reversing the logic.
+Our goal is to determine the vault's password by analyzing the given Java source code. The program checks whether the user input matches a predefined byte sequence. Our task is to extract this byte sequence and convert it into a human-readable string. Our can achieve this using manual conversion, online tools, or writing a Java program. Once decoded, prepend picoCTF{ and append } to obtain the final flag.
 
 ## My Experience
 New day, new challenge! Let's solve the "Vault Door 4" question:
