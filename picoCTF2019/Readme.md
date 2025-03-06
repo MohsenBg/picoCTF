@@ -18,9 +18,7 @@ coming soon 😁
 
 ## Tools Used  
 - VsCode
-- Ghidra  
-- Cutter  
-- IDA Free  
+- Ghidra
 - Python Scripts
 - Java 
 
