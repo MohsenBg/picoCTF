@@ -11,6 +11,7 @@ This section documents the challenges I solved in PicoCTF 2019. I share my solut
 - [Vault Door 6](./VaultDoor6.md)
 - [Vault Door 7](./VaultDoor7.md)
 - [Vault Door 8](./VaultDoor8.md)
+- [Reverse Cipher](./reverse_cipher.md)
 
 ### Binary Exploitation  
 coming soon 😁
@@ -18,7 +19,7 @@ coming soon 😁
 
 ## Tools Used  
 - VsCode
-- Ghidra
+- Ghidra  
 - Python Scripts
 - Java 
 
