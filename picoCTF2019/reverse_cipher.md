@@ -12,8 +12,15 @@ We have recovered a binary and a text file. Can you reverse the flag.
 Let's download two files and inspect their contents.
 We have two files: one called rev and the other rev_this. The question mentions that one is a binary file and the other is a text file. To determine their types, I used the file command in Linux. You can also use other tools or other programs like `hexdump`, or `binwalk` to analyze the files more easily.
 
-```bash
-/home/remnux/Downloads/rev: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=523d51973c11197605c76f84d4afb0fe9e59338c, not stripped
+```console
+remnux@remnux:/home/remnux/Downloads$ file rev
+/home/remnux/Downloads/rev: ELF 64-bit LSB shared object,
+x86-64, version 1 (SYSV), dynamically linked, 
+interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, 
+BuildID[sha1]=523d51973c11197605c76f84d4afb0fe9e59338c, not stripped
+
+remnux@remnux:/home/remnux/Downloads$ cat rev_this
+picoCTF{w1{1wq84>654f26}
 ```
 The output shows we have an ELF file, so we can use REMnux as our environment because it provides useful tools and programs like Ghidra.
 
