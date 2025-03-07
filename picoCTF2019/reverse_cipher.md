@@ -1,4 +1,4 @@
-# reverse_cipher
+# Reverse Cipher
 
 ## Introduction
 In this post, we will walk through solving the `reverse_cipher` challenge and use Ghidra to assist us in reverse-engineering (SRE) the challenge to uncover the flag.
