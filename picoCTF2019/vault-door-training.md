@@ -1,4 +1,8 @@
-# Vault Door Training
+# Vault Door Training  
+- **Name:** Vault Door Training  
+- **Level:** Easy  
+- **Link:** [Challenge Link](https://play.picoctf.org/practice/challenge/7?category=3&originalEvent=1&page=1)  
+- **File Type:** Java  
 
 ## Introduction
 
