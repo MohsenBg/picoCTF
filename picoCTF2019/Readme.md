@@ -12,6 +12,7 @@ This section documents the challenges I solved in PicoCTF 2019. I share my solut
 - [Vault Door 7](./VaultDoor7.md)
 - [Vault Door 8](./VaultDoor8.md)
 - [Reverse Cipher](./reverse_cipher.md)
+- [Need For Speed](./need_for_speed.md)
 
 ### Binary Exploitation  
 coming soon 😁
