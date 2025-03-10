@@ -9,7 +9,7 @@ Here is my repository for the  picoCTF challenges that I have done. This reposit
 - **[PicoCTF  2019](./picoCTF2019)**  
   *Here are the solutions for  PicoCTF 2019, including reverse engineering challenges and more.*
 
--  **[PicoCTF 2020](./#)**  
+<!-- -  **[PicoCTF 2020](./#)**  
   *Come one come all  to my solutions for the 2020 edition of picoCTF, with all kinds of  challenges. (coming soon)*
 
 - **[PicoCTF  2021](./#)**  
@@ -19,7 +19,7 @@ Here is my repository for the  picoCTF challenges that I have done. This reposit
   *You can find my solutions and  tools used for the PicoCTF 2022 challenges here. (coming soon)*
 
 -  **[PicoCTF 2023](./#)**  
-   *Solve the latest challenges I've done in PicoCTF 2023. (coming  soon)*
+   *Solve the latest challenges I've done in PicoCTF 2023. (coming  soon)* -->
 
 ---
 
