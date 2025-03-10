@@ -1,4 +1,10 @@
-# Need for Speed
+# 🚀 Need for Speed
+
+- **📛 Challenge Name:** Need for Speed
+- **🎯 Difficulty:** Hard  
+- **🔗 Challenge:** [View on PicoCTF](https://play.picoctf.org/practice/challenge/39?category=3&originalEvent=1&page=2)  
+- **🐧 File Type:** Linux ELF Binary  
+
 
 ## Introduction
 In this post, we will walk through solving the `Need for Speed` challenge and use Ghidra to assist us in reverse-engineering (SRE) the challenge to uncover the flag.
