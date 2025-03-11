@@ -15,7 +15,8 @@ This section documents the challenges I solved in **PicoCTF 2019**. I share my *
 
 🔄 **Other RE Challenges:**  
 - 🔍 [Reverse Cipher](./reverse_cipher.md)  
-- ⚡ [Need For Speed](./need_for_speed.md)  
+- ⚡  [Need For Speed](./need_for_speed.md)  
+- 🖥️ [Forky](./Forky.md)  
 
 ### 🛠️ Binary Exploitation  
 Coming soon... 😁🔜  
