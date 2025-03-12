@@ -1,5 +1,10 @@
 # Reverse Cipher
 
+- **📛 Name:** Vault Door Training  
+- **⚡ Level:** Easy  
+- **🔗 Link:** [Challenge Link](https://play.picoctf.org/practice/challenge/7?category=3&originalEvent=1&page=1)  
+- **☕ File Type:** Java  
+
 ## Introduction
 In this post, we will walk through solving the `reverse_cipher` challenge and use Ghidra to assist us in reverse-engineering (SRE) the challenge to uncover the flag.
 
