@@ -1,4 +1,8 @@
-# Vault Door 1
+# 🔒 Vault Door 1
+- 📛 Name: Vault Door 1
+- ⚡ Level: Easy
+- 🔗 Link: [Challenge Link](https://play.picoctf.org/practice/challenge/12?category=3&originalEvent=1&page=1)
+- ☕ File Type: Java
 
 ## Introduction
 In this post, we tackle the Java-based code challenge called "Vault Door 1." Our goal is to reverse engineer the source code to understand how the password is validated and create the correct password to bypass this level.
