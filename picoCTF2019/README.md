@@ -15,6 +15,7 @@ This section documents the challenges I solved in **PicoCTF 2019**. I share my *
 
 📂 **Droids Series:**  
 - 🤖 [Droids 0](./droids0.md)  
+- 🤖 [Droids 1](./droids1.md)  
 
 🔄 **Other RE Challenges:**  
 - 🔍 [Reverse Cipher](./reverse_cipher.md)  
