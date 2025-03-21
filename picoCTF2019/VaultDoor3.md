@@ -1,4 +1,8 @@
-# Vault Door 3
+# 🔒 Vault Door 3
+- 📛 Name: Vault Door 3
+- ⚡ Level: Medium
+- 🔗 Link: [Challenge Link](https://play.picoctf.org/practice/challenge/60?category=3&originalEvent=1&page=1)
+- ☕ File Type: Java
 
 ## Introduction
 
