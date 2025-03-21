@@ -3,7 +3,8 @@ This section documents the challenges I solved in **PicoCTF 2025**. I share my *
 
 ## 🏆 Challenges  
 ### 🔑 Reverse Engineering (SRE)  
-[perplexed](./perplexed.md)
+*  🪟 [Binary Instrumentation 1](./BinaryInstrumentation1.md)
+*  🐧 [perplexed](./perplexed.md)
 
 
 ## 🔧 Tools Used  
