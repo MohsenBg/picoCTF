@@ -1,3 +1,12 @@
+# 🚀 Binary Instrumentation 2
+
+- **📛 Challenge Name:** Binary Instrumentation 2
+- **🎯 Difficulty:** Medium  
+- **🔗 Challenge:** [View on PicoCTF](https://play.picoctf.org/practice/challenge/452?category=3&originalEvent=74&page=1)
+- **🪟 File Type:** Windows PE 
+
+
+
 ### Introduction
 In this post, we walk through solving the `Binary Instrumentation 2` challenge using tools like x64dbg and DIE to reverse-engineer the Portable Executable (PE) binary and intercept system calls to uncover the flag.
 
