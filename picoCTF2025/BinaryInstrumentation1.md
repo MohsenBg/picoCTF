@@ -39,15 +39,15 @@ So, let's use dynamic analysis and try to find that API to see where the program
 
 I ran x64dbg with the debugger and executed the program to see where it stops. It stops at a specific breakpoint, syscall 34, which is `NtDelayExecution` (by the way, x64dbg displays the syscall that is being called, and I also googled that too).
 
-![Xdb64 NtDelayExecution BinaryInstrumentation1](./image/Xdb64_NtDelayExecution_BinaryInstrumentation1.png)
+![X64dbg NtDelayExecution BinaryInstrumentation1](./image/X64dbg_NtDelayExecution_BinaryInstrumentation1.png)
 
 So, what if we prevent this syscall from running? We could set its value to a dummy value, for example, zero, to prevent `NtDelayExecution` from executing. I checked that syscall zero means `STATUS_SUCCESS`, so why not set it to zero? Let's add a breakpoint before the syscall, restart the program, and change the value to zero.
 
-![Xdb64 Change syscall 34 to 0 BinaryInstrumentation1](./image/Xdb64_ChangeSyscall34to0_BinaryInstrumentation1.png)
+![X64dbg Change syscall 34 to 0 BinaryInstrumentation1](./image/X64dbg_ChangeSyscall34to0_BinaryInstrumentation1.png)
 
 Before we continue, if we run the program, it closes the terminal. So, let's add a breakpoint on `ExitProcess` to prevent the program from closing the terminal. Also, there's no need to have the breakpoint enabled on the `NtDelayExecution` syscall, so let's disable that as well.
 
-![Xdb64 BreakPoint ExitProcess BinaryInstrumentation1](./image/Xdb64_BreakPointExitProcess_BinaryInstrumentation1.png)
+![X64dbg BreakPoint ExitProcess BinaryInstrumentation1](./image/X64dbg_BreakPointExitProcess_BinaryInstrumentation1.png)
 
 Let’s continue debugging and see what it gives us. Oh, it gives us this message:
 
@@ -59,7 +59,7 @@ Ok, I'm Up! The flag is: cGljb0NURnt3NGtlX20zX3VwX3cxdGhfZnIxZGFfZjI3YWNjMzh9
 
 But it’s not the flag yet, because when I tried it, it didn’t work. So, I searched and analyzed it. Thanks to GPT, I figured out that it’s Base64 encoded. Let’s convert that using this command on Windows:
 
-```console
+```powershell
 [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("cGljb0NURnt3NGtlX20zX3VwX3cxdGhfZnIxZGFfZjI3YWNjMzh9"))
 ```
 
