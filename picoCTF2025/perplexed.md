@@ -1,7 +1,7 @@
 # 🚀 Perplexed
 
 - **📛 Challenge Name:** Perplexed
-- **🎯 Difficulty:** Hard  
+- **🎯 Difficulty:** Medium  
 - **🔗 Challenge:** -  
 - **🐧 File Type:** Linux ELF Binary  
 
