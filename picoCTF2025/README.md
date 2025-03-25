@@ -8,6 +8,10 @@ This section documents the challenges I solved in **PicoCTF 2025**. I share my *
 *  🐧 [Perplexed](./perplexed.md)
 
 
+### 🛠️ Binary Exploitation  
+Coming soon... 😁🔜  
+
+
 ## 🔧 Tools Used  
 - 🖥️ **VS Code**  
 - 🛠️ **Ghidra**
