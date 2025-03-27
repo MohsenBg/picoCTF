@@ -32,5 +32,6 @@ Coming soon... 😁🔜
 - 🔍 **Cutter**
 - 🐍 **Python Scripts**  
 - ☕ **Java**  
+- 🤖 **Jadx**
 
 🚀 **Feel free to explore and learn from my solutions!** 💡  
