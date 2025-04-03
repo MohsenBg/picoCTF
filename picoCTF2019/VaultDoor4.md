@@ -1,4 +1,9 @@
-# Vault Door 4
+# 🔒 Vault Door 4
+- 📛 Name: Vault Door 4
+- ⚡ Level: Medium
+- 🔗 Link: [Challenge Link](https://play.picoctf.org/practice/challenge/71?category=3&difficulty=2&originalEvent=1&page=1)
+- ☕ File Type: Java
+
 
 ## Introduction
 Our goal is to determine the vault's password by analyzing the given Java source code. The program checks whether the user input matches a predefined byte sequence. Our task is to extract this byte sequence and convert it into a human-readable string. Our can achieve this using manual conversion, online tools, or writing a Java program. Once decoded, prepend picoCTF{ and append } to obtain the final flag.
